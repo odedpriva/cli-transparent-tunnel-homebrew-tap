@@ -5,21 +5,39 @@
 class Ctt < Formula
   desc ""
   homepage "https://github.com/odedpriva/cli-transparent-tunnel"
-  version "0.0.1-rc6"
-  depends_on :macos
+  version "0.0.1-rc7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc6/cli-transparent-tunnel_0.0.1-rc6_Darwin_arm64.tar.gz"
-      sha256 "365f9c433daa3797e50cccd5e8e81a3dca826eb6ae2cbd191159babfee260ac9"
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_Darwin_arm64.tar.gz"
+      sha256 "d40557745fd6c778d6091b82f91766f96b965f3aad1f54d878fb9d9c1e5c8848"
 
       def install
         bin.install "ctt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc6/cli-transparent-tunnel_0.0.1-rc6_Darwin_amd64.tar.gz"
-      sha256 "d034b7fcfe28eae80b1fc06db1fb77a96e669bd3c2e721e6761345722d1a6bf3"
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_Darwin_amd64.tar.gz"
+      sha256 "d3cff9e0843f1954a8f30da60dc4bfe0a6145b0c73381c47e02643a7bf1ae44c"
+
+      def install
+        bin.install "ctt"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_linux_arm64.tar.gz"
+      sha256 "e189afdec7dc0e827a9500b16337fcc25f476f5ac70503a271b3679df85cdf27"
+
+      def install
+        bin.install "ctt"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_linux_amd64.tar.gz"
+      sha256 "f0c11915e08fb2ff874c89bfec431119c58fea4615d61f6a54ffa7ede96f7966"
 
       def install
         bin.install "ctt"
