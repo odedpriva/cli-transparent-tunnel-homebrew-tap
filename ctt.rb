@@ -5,20 +5,20 @@
 class Ctt < Formula
   desc ""
   homepage "https://github.com/odedpriva/cli-transparent-tunnel"
-  version "0.0.1-rc7"
+  version "0.0.1-rc8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_Darwin_arm64.tar.gz"
-      sha256 "d40557745fd6c778d6091b82f91766f96b965f3aad1f54d878fb9d9c1e5c8848"
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc8/cli-transparent-tunnel_0.0.1-rc8_Darwin_arm64.tar.gz"
+      sha256 "1f3d290f8b112e691001b47d995f72e89bb4b1b313875df356c33dda780e470e"
 
       def install
         bin.install "ctt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_Darwin_amd64.tar.gz"
-      sha256 "d3cff9e0843f1954a8f30da60dc4bfe0a6145b0c73381c47e02643a7bf1ae44c"
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc8/cli-transparent-tunnel_0.0.1-rc8_Darwin_amd64.tar.gz"
+      sha256 "cb1764a535c3f364c2b6fc2700ad09c7b0f8723eebaaeb352167e492d528841f"
 
       def install
         bin.install "ctt"
@@ -28,16 +28,16 @@ class Ctt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_linux_arm64.tar.gz"
-      sha256 "e189afdec7dc0e827a9500b16337fcc25f476f5ac70503a271b3679df85cdf27"
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc8/cli-transparent-tunnel_0.0.1-rc8_linux_arm64.tar.gz"
+      sha256 "60ebe2abe941bce0e89b6ace207a4385ecea2d665780a0dd9b23fb4de73b2431"
 
       def install
         bin.install "ctt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc7/cli-transparent-tunnel_0.0.1-rc7_linux_amd64.tar.gz"
-      sha256 "f0c11915e08fb2ff874c89bfec431119c58fea4615d61f6a54ffa7ede96f7966"
+      url "https://github.com/odedpriva/cli-transparent-tunnel/releases/download/v0.0.1-rc8/cli-transparent-tunnel_0.0.1-rc8_linux_amd64.tar.gz"
+      sha256 "59318bff34dcaccae43096452a239b2d322e4097e51f53a47df20e3e1762ae89"
 
       def install
         bin.install "ctt"
